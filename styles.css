@@ -368,15 +368,56 @@ body {
   padding: 1.75rem;
   border: none;
   background: #f8fafc;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.profile-highlights .service-card h3 {
+.profile-highlights .service-card:hover {
+  background: #e6fffa;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+}
+
+.profile-highlights .service-card.expanded {
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+}
+
+.expand-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 1.75rem;
+  background: #ffffff;
+  border-radius: 0 0 1rem 1rem;
+  margin: -1.75rem -1.75rem 0;
+  margin-top: 1rem;
+}
+
+.expanded .expand-content {
+  max-height: 500px;
+  padding: 1.5rem 1.75rem 2rem;
+}
+
+.expand-content h4 {
   color: #0f766e;
-  margin-bottom: 0.75rem;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
 }
 
-.profile-highlights .service-card p {
+.expand-content ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.expand-content li {
+  margin-bottom: 0.75rem;
   color: #475569;
+  line-height: 1.6;
+}
+
+.expand-content li strong {
+  color: #0f766e;
 }
 
 .contact-summary {

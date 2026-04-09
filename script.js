@@ -72,3 +72,26 @@ const revealObserver = new IntersectionObserver((entries) => {
 reveals.forEach((reveal) => {
   revealObserver.observe(reveal);
 });
+
+// Expandable service cards (apenas carolina.html)
+const expandableCards = document.querySelectorAll('.profile-highlights .expandable');
+
+expandableCards.forEach((card) => {
+  card.addEventListener('click', (event) => {
+    // Prevent closing when clicking inside expand-content
+    const expandContent = card.querySelector('.expand-content');
+    if (expandContent && expandContent.contains(event.target)) {
+      return;
+    }
+    
+    // Close other expanded cards
+    expandableCards.forEach((otherCard) => {
+      if (otherCard !== card) {
+        otherCard.classList.remove('expanded');
+      }
+    });
+    
+    // Toggle current card
+    card.classList.toggle('expanded');
+  });
+});
