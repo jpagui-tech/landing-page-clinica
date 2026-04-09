@@ -20,6 +20,25 @@ if (contactForm) {
   });
 }
 
+const profileCards = document.querySelectorAll('.team-card[data-profile]');
+
+profileCards.forEach((card) => {
+  const openProfile = () => {
+    const profile = card.dataset.profile;
+    if (profile) {
+      window.location.href = `${profile}.html`;
+    }
+  };
+
+  card.addEventListener('click', openProfile);
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openProfile();
+    }
+  });
+});
+
 const interactiveCards = document.querySelectorAll('.interactive-card');
 const interactiveDetail = document.getElementById('interactiveDetail');
 
@@ -34,4 +53,22 @@ interactiveCards.forEach((card) => {
     card.setAttribute('aria-pressed', 'true');
     interactiveDetail.textContent = card.dataset.detail;
   });
+});
+
+// Scroll reveal animation
+const reveals = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+});
+
+reveals.forEach((reveal) => {
+  revealObserver.observe(reveal);
 });
