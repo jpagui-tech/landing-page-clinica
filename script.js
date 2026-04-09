@@ -6,10 +6,11 @@ if (contactForm) {
 
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
     const cidade = document.getElementById('cidade').value.trim();
     const estado = document.getElementById('estado').value.trim();
 
-    if (!nome || !email || !cidade || !estado) {
+    if (!nome || !email || !telefone || !cidade || !estado) {
       alert('Por favor, preencha todos os campos antes de enviar.');
       return;
     }
@@ -18,3 +19,19 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
+const interactiveCards = document.querySelectorAll('.interactive-card');
+const interactiveDetail = document.getElementById('interactiveDetail');
+
+interactiveCards.forEach((card) => {
+  card.addEventListener('click', () => {
+    interactiveCards.forEach((item) => {
+      item.classList.remove('active');
+      item.setAttribute('aria-pressed', 'false');
+    });
+
+    card.classList.add('active');
+    card.setAttribute('aria-pressed', 'true');
+    interactiveDetail.textContent = card.dataset.detail;
+  });
+});
