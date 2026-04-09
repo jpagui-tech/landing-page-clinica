@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" role="img" aria-labelledby="title-beatriz">
+  <title id="title-beatriz">Foto estilizada da Dra. Beatriz</title>
+  <rect width="280" height="280" rx="32" fill="#c7d2fe" />
+  <circle cx="140" cy="120" r="58" fill="#fde68a" />
+  <circle cx="122" cy="108" r="10" fill="#1f2937" />
+  <circle cx="158" cy="108" r="10" fill="#1f2937" />
+  <path d="M126 140c8 10 24 10 34 0" fill="none" stroke="#1f2937" stroke-width="8" stroke-linecap="round" />
+  <path d="M80 90c18-26 56-26 84-8c12 8 20 20 22 34" fill="none" stroke="#0f766e" stroke-width="18" stroke-linecap="round" />
+  <rect x="78" y="180" width="124" height="70" rx="32" fill="#0f172a" />
+  <path d="M92 198h96" stroke="#c7d2fe" stroke-width="12" stroke-linecap="round" />
+  <path d="M92 224h96" stroke="#c7d2fe" stroke-width="12" stroke-linecap="round" />
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" role="img" aria-labelledby="title-ana">
+  <title id="title-ana">Foto estilizada de Dra. Ana</title>
+  <rect width="280" height="280" rx="32" fill="#d1fae5" />
+  <circle cx="140" cy="120" r="58" fill="#fde68a" />
+  <circle cx="118" cy="108" r="10" fill="#1f2937" />
+  <circle cx="162" cy="108" r="10" fill="#1f2937" />
+  <path d="M120 138c10 12 30 12 40 0" fill="none" stroke="#1f2937" stroke-width="8" stroke-linecap="round" />
+  <path d="M70 90c14-28 54-30 80-10c18 15 20 28 18 44" fill="none" stroke="#0f766e" stroke-width="18" stroke-linecap="round" />
+  <rect x="82" y="180" width="116" height="70" rx="32" fill="#14b8a6" />
+  <path d="M96 196h88" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+  <path d="M96 222h88" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+</svg>

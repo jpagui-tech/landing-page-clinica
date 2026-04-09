@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Vida Saudável | Cuidando de Você</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page">
+
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Clínica Vida Saudável</h1>
+            <p>Referência em cuidado, bem-estar e saúde integrada.</p>
+        </div>
+    </header>
+
+    <section class="section section-services">
+        <div class="section-inner">
+            <h2>Nossos Principais Serviços</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <img src="images/fisioterapia.svg" alt="Sessão de Fisioterapia">
+                    <div class="card-body">
+                        <h3>Fisioterapia Especializada</h3>
+                        <p>Tratamentos personalizados focados na reabilitação motora, alívio de dores crônicas e recuperação pós-operatória com equipamentos de ponta.</p>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <img src="images/nutricao.svg" alt="Consulta Nutricional">
+                    <div class="card-body">
+                        <h3>Acompanhamento Nutricional</h3>
+                        <p>Planos alimentares individualizados para emagrecimento saudável, hipertrofia, ou controle de doenças metabólicas e diabetes.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-team">
+        <div class="section-inner">
+            <h2>Conheça Nossa Equipe</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="images/ana.svg" alt="Foto Dra. Ana">
+                    <h3>Dra. Ana Silva</h3>
+                    <p>Fisioterapeuta Chefe</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/carlos.svg" alt="Foto Dr. Carlos">
+                    <h3>Dr. Carlos Mendes</h3>
+                    <p>Nutricionista Clínico</p>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/beatriz.svg" alt="Foto Dra. Beatriz">
+                    <h3>Dra. Beatriz Costa</h3>
+                    <p>Psicóloga Integrativa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-contact">
+        <div class="section-inner section-contact-inner">
+            <h2>Agende sua Consulta</h2>
+            <p>Preencha os dados abaixo e entraremos em contato com você.</p>
+
+            <form id="contactForm" class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input id="nome" name="nome" type="text" placeholder="João da Silva" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" placeholder="joao@exemplo.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input id="cidade" name="cidade" type="text" placeholder="São Paulo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <input id="estado" name="estado" type="text" placeholder="SP" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="button button-primary" type="submit">Enviar Solicitação</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>© 2026 Clínica Vida Saudável. Projeto Acadêmico.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
