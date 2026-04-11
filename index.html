@@ -73,28 +73,53 @@
 
     <section class="section section-interactive">
         <div class="section-inner">
-            <div class="interactive-panel">
-                <div class="interactive-copy">
-                    <h2>Explore um plano de cuidado inteligente</h2>
-                    <p>Toque nos cards abaixo para descobrir o que cada serviço entrega e como ele pode fazer a diferença no seu dia a dia.</p>
-                </div>
-                <div class="interactive-grid" id="interactiveCards">
-                    <button class="interactive-card active" type="button" data-detail="Nossa avaliação rápida identifica prioridades de saúde imediatas, com foco em movimento, dor e qualidade de vida." aria-pressed="true">
-                            Avaliação rápida
-                    </button>
-                    <button class="interactive-card" type="button" data-detail="Construímos um plano personalizado com objetivos práticos, metas fáceis de seguir e orientação profissional contínua.">
-                            Plano personalizado
-                    </button>
-                    <button class="interactive-card" type="button" data-detail="Acompanhamento contínuo para garantir que você mantenha o progresso e receba suporte sempre que precisar." aria-pressed="false">
-                            Acompanhamento contínuo
-                    </button>
-                </div>
-                <div class="interactive-detail" id="interactiveDetail">
-                    Nossa avaliação rápida identifica prioridades de saúde imediatas, com foco em movimento, dor e qualidade de vida.
-                </div>
+            <div class="section-inner">
+    <h2 style="text-align: center;">Explore um plano de cuidado inteligente</h2>
+    <p style="text-align: center; margin-bottom: 2rem;">Toque nos cards abaixo para descobrir o que cada serviço entrega e como ele pode fazer a diferença no seu dia a dia.</p>
+    
+    <div class="profile-highlights">
+        <article class="service-card expandable">
+            <h3>Avaliação rápida</h3>
+            <p>Identifica prioridades de saúde imediatas, com foco em movimento, dor e qualidade de vida.</p>
+            <div class="expand-content">
+                <h4>Atributos do plano:</h4>
+                <ul>
+                    <li><strong>Triagem completa:</strong> Análise do seu histórico de saúde.</li>
+                    <li><strong>Foco na dor:</strong> Mapeamento das suas queixas principais.</li>
+                    <li><strong>Direcionamento:</strong> Indicação exata de qual profissional você precisa.</li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </article>
+
+        <article class="service-card expandable">
+            <h3>Plano personalizado</h3>
+            <p>Um roteiro de cuidados exclusivo desenhado especificamente para a sua rotina e objetivos reais.</p>
+            <div class="expand-content">
+                <h4>Atributos do plano:</h4>
+                <ul>
+                    <li><strong>Metas reais:</strong> Objetivos que cabem no seu dia a dia.</li>
+                    <li><strong>Visão integrada:</strong> União de corpo, mente e alimentação.</li>
+                    <li><strong>Estratégia prática:</strong> Ferramentas para você aplicar imediatamente.</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="service-card expandable">
+            <h3>Acompanhamento contínuo</h3>
+            <p>Suporte constante da nossa equipe para garantir que você alcance resultados reais e duradouros.</p>
+            <div class="expand-content">
+                <h4>Atributos do plano:</h4>
+                <ul>
+                    <li><strong>Retornos agendados:</strong> Avaliações periódicas de evolução.</li>
+                    <li><strong>Ajuste de rota:</strong> Mudanças no plano sempre que necessário.</li>
+                    <li><strong>Suporte ativo:</strong> Canal aberto para tirar dúvidas na jornada.</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</div>
+    
+</section>
 
     <section class="section section-contact" id="agendamento">
         <div class="section-inner section-contact-inner">
@@ -124,7 +149,7 @@
 
                 <div class="form-group">
                     <label for="telefone">WhatsApp</label>
-                    <input id="telefone" name="telefone" type="tel" placeholder="(11) 99999-9999" required>
+                    <input id="whatsapp" name="whatsapp" type="tel" placeholder="(11) 99999-9999" maxlength="15" required>
                 </div>
                 <div class="form-group">
                     <label for="mensagem">Mensagem (opcional)</label>
@@ -140,6 +165,34 @@
     <footer class="site-footer">
         <p>© 2026 Clínica Vida Saudável.</p>
     </footer>
+
+    <footer class="main-footer">
+    <div class="section-inner footer-grid">
+        <div class="footer-info">
+            <h3>Clínica Vida Saudável</h3>
+            </h3>
+            <p>Cuidado inteligente e humanizado para sua saúde.</p>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Onde estamos</h3>
+            <p>Rua Brasileira, 354 - Sala 45<br>
+               Bairro fazendinha cana seca - Brasília/DF<br>
+               CEP: 87654-387</p>
+        </div>
+
+        <div class="footer-social">
+            <h4>Fale conosco</h4>
+            <p>WhatsApp: (61) 6457-3467</p>
+            <div class="social-links">
+                <a href="https://instagram.com/clinica_vida_saudavel" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Clínica Vida Saudável. Todos os direitos reservados.</p>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>

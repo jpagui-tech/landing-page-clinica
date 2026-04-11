@@ -151,14 +151,28 @@ body {
   }
 }
 
-.services-grid,
-.team-grid {
-  display: grid;
-  gap: 1.5rem;
+/* Código original - Cards se ajustam ao conteúdo individualmente */
+.service-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    
+    /* Removemos o height e o min-height fixos */
+    height: auto; 
+    display: block; /* Volta ao comportamento padrão de bloco */
+    
+    transition: transform 0.3s ease;
+    overflow: visible; /* Garante que nada seja cortado */
 }
 
-.services-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+/* Garante que o grid não force o estiramento */
+.services-grid,
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    align-items: start; /* Importante: faz com que eles NÃO estiquem para ficar iguais */
 }
 
 @media (max-width: 768px) {
@@ -631,4 +645,44 @@ textarea:focus {
     height: 220px;
   }
 }
+.main-footer {
+    background-color: #f9f9f9; /* Um tom leve para separar do formulário */
+    padding: 4rem 0 2rem;
+    border-top: 1px solid #eee;
+    color: #444;
+}
 
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-grid h3, .footer-grid h4 {
+    color: #006d5d; /* Use a cor verde do seu botão */
+    margin-bottom: 1rem;
+}
+
+.footer-social .social-links a {
+    display: inline-block;
+    background-color: #006d5d;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: 0.3s;
+}
+
+.footer-social .social-links a:hover {
+    background-color: #004d42;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+    color: #888;
+}

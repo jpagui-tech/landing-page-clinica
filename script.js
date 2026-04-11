@@ -94,3 +94,32 @@ expandableCards.forEach((card) => {
     card.classList.toggle('expanded');
   });
 });
+// Seleciona o campo do WhatsApp
+const inputWhatsapp = document.getElementById('whatsapp');
+
+if (inputWhatsapp) {
+    inputWhatsapp.addEventListener('input', function(e) {
+        // Remove qualquer coisa que NÃO seja número (mantém o raw value)
+        let numero = e.target.value.replace(/\D/g, '');
+        
+        // Limita a 11 números (2 do DDD + 9 do celular)
+        if (numero.length > 11) {
+            numero = numero.slice(0, 11);
+        }
+
+        // Aplica a formatação sem travar o botão de apagar
+        let formatado = numero;
+        
+        if (numero.length > 2) {
+            formatado = `(${numero.slice(0, 2)}) ${numero.slice(2)}`;
+        }
+        
+        if (numero.length > 7) {
+            // Só coloca o traço se o usuário digitar o 8º número
+            formatado = `(${numero.slice(0, 2)}) ${numero.slice(2, 7)}-${numero.slice(7)}`;
+        }
+
+        // Devolve o valor formatado para o campo
+        e.target.value = formatado;
+    });
+}
