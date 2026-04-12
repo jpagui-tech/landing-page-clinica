@@ -768,12 +768,12 @@ textarea:focus {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
     gap: 1.5rem !important;
-    align-items: start !important; /* ISSO impede que um estique o outro */
+    align-items: start !important; 
 }
 
 /* O CARD FECHADO: Forçamos uma altura fixa MÍNIMA para ficarem iguais */
 #grid-home .service-card {
-    min-height: 280px !important; /* Altura padrão para ficarem retos */
+    min-height: 280px !important; 
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-start !important;
