@@ -151,28 +151,47 @@ body {
   }
 }
 
-/* Código original - Cards se ajustam ao conteúdo individualmente */
-.service-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    
-    /* Removemos o height e o min-height fixos */
-    height: auto; 
-    display: block; /* Volta ao comportamento padrão de bloco */
-    
-    transition: transform 0.3s ease;
-    overflow: visible; /* Garante que nada seja cortado */
+
+.services-grid, 
+.team-grid, 
+.profile-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;  
 }
 
-/* Garante que o grid não force o estiramento */
-.services-grid,
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    align-items: start; /* Importante: faz com que eles NÃO estiquem para ficar iguais */
+
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+
+.service-card img {
+    width: 100%;      
+    height: 200px;     
+    object-fit: cover; 
+    display: block;
+}
+
+
+.service-card h3 {
+    padding: 1.5rem 1rem 0.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+.service-card p {
+    padding: 0 1.5rem 1.5rem;
+    text-align: center;
+    flex-grow: 1; 
 }
 
 @media (max-width: 768px) {
@@ -685,4 +704,99 @@ textarea:focus {
     padding-top: 2rem;
     font-size: 0.9rem;
     color: #888;
+}
+
+/* 1. Altera o comportamento da grade para não esticar os vizinhos */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    align-items: start !important; /* Faz cada card ter sua própria altura real */
+}
+
+/* 2. Garante que o card não tente preencher um espaço vazio */
+.service-card {
+    height: auto !important; 
+    display: block !important;
+}
+
+/* 3. Ajuste para as imagens (se houver) continuarem bonitas */
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- AJUSTE DE ALINHAMENTO DOS CARDS --- */
+
+/* 1. Para os perfis (onde o texto varia e não deve ter buraco branco) */
+.profile-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    align-items: start; /* Cada card termina onde o texto acaba */
+}
+
+/* 2. Para a Home (onde você quer tudo alinhadinho e igual) */
+.grid-home {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch !important; /* Força todos a ficarem da mesma altura */
+}
+
+.grid-home .service-card {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-home .service-card p {
+    flex-grow: 1; /* Preenche o espaço para alinhar os cards por baixo */
+}
+
+/* 3. Garante que as fotos dos serviços não fiquem pequenas ou esmagadas */
+.service-card img {
+    width: 100%;
+    height: 220px; 
+    object-fit: cover;
+    display: block;
+}
+
+/* O CONTAINER: Alinha por cima e não deixa um card influenciar o outro */
+#grid-home {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 1.5rem !important;
+    align-items: start !important; /* ISSO impede que um estique o outro */
+}
+
+/* O CARD FECHADO: Forçamos uma altura fixa MÍNIMA para ficarem iguais */
+#grid-home .service-card {
+    min-height: 280px !important; /* Altura padrão para ficarem retos */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    height: auto !important; 
+    transition: all 0.3s ease-in-out;
+}
+
+/* O texto principal cresce para preencher o espaço e manter o alinhamento inferior */
+#grid-home .service-card p {
+    flex-grow: 1 !important;
+    margin-bottom: 0 !important;
+}
+
+/* O CARD ABERTO: Ele cresce de forma independente */
+#grid-home .service-card.active {
+    height: auto !important;
+    min-height: 280px !important;
+}
+
+/* Conteúdo extra: aparece sem empurrar o card do lado */
+#grid-home .service-card.active .expand-content {
+    display: block !important;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
 }
