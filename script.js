@@ -123,3 +123,27 @@ if (inputWhatsapp) {
         e.target.value = formatado;
     });
 }
+function enviarMensagem() {
+    // 1. Pega o formulário onde o botão está
+    const formulario = document.querySelector('form');
+
+    // 2. Verifica se o formulário é válido (campos obrigatórios preenchidos)
+    if (formulario.checkValidity()) {
+        // Se estiver tudo certo, evita o recarregamento e mostra o alerta
+        event.preventDefault(); 
+
+        Swal.fire({
+            title: 'Solicitação Enviada! 🎉',
+            html: 'Ficamos felizes com seu interesse!<br><br>Agora é só relaxar. Nosso time vai analisar sua mensagem e te chamamos em instantes no WhatsApp.',
+            icon: 'success',
+            confirmButtonText: 'Combinado!',
+            confirmButtonColor: '#2d5a27'
+        });
+        
+        // Opcional: Limpa o formulário depois de enviar
+        formulario.reset();
+    } else {
+        // Se faltar algo, o próprio navegador vai mostrar o aviso de "preencha este campo"
+        // Não fazemos o preventDefault aqui para deixar o navegador avisar o erro
+    }
+}

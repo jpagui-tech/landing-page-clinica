@@ -800,3 +800,29 @@ textarea:focus {
     margin-top: 1rem;
     border-top: 1px solid #eee;
 }
+/* Estilizando o botão de agendamento */
+.seu-botao-css {
+    background-color: #2d5a27 !important; /* O verde da clínica */
+    color: white !important;
+    padding: 12px 25px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important; /* Faz o botão ocupar a largura do formulário */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Efeito ao passar o mouse */
+.seu-botao-css:hover {
+    background-color: #1e3d1a !important; /* Um verde mais escuro no hover */
+    transform: translateY(-2px) !important; /* Ele sobe de leve */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Efeito ao clicar */
+.seu-botao-css:active {
+    transform: translateY(0) !important;
+}
